@@ -83,3 +83,36 @@ calc2 = new Calculator();
 
 // #### Zadanie 3( gra )
 // Stwórz konstruktor z dwoma metodami. Jedna co sekundę ma zminiać zawartość pola typu number na losową liczbę z zakresu 1-10. Druga ma sprawdzać czy liczba jest większa o 5. Jeśli tak to program ma zakończyć działanie. Obie metody muszą być wywołane na różnych obiektach i wymianiać dane przy pomocy pola prototype.
+
+function RandomObj() {
+
+    this.changeN = function () {
+        RandomObj.prototype.changeNumInterval;
+    }
+
+    this.checkN = function () {
+        RandomObj.prototype.checkNumInterval;
+    }
+}
+
+RandomObj.prototype.changeNumInterval = setInterval(() => {
+    let randomize = Math.floor((Math.random() * 10) + 1);
+    RandomObj.prototype.randomNumber = randomize;
+    console.log(RandomObj.prototype.randomNumber);
+
+}, 1000);
+
+RandomObj.prototype.checkNumInterval = setInterval(() => {
+    if (RandomObj.prototype.randomNumber > 5) {
+        console.log("Koniec programu");
+        clearInterval(RandomObj.prototype.changeNumInterval);
+        clearInterval(RandomObj.prototype.checkNumInterval);
+    }
+
+}, 1000);
+
+random1 = new RandomObj();
+random2 = new RandomObj();
+RandomObj.prototype.randomNumber = 0;
+random1.changeN();
+random2.checkN();
